@@ -1,9 +1,9 @@
 import pandas as pd
-import matplotlib.pyplot as plt  # Make sure this import is added
+import matplotlib.pyplot as plt  
 
-from app.shared import process_medal_counts  # Import the shared function
-from app.data_loader import fetch_data  # Ensure this is fetching the data
-from app.country_utils import correct_country_names  # Import this function
+from app.shared import process_medal_counts  
+from app.data_loader import fetch_data  
+from app.country_utils import correct_country_names  
 
 
 # Fetch the medal counts data

@@ -1,6 +1,4 @@
-
 import pycountry
-import emoji
 
 def correct_country_names(country_name):
     corrections = {
@@ -28,7 +26,7 @@ def correct_country_names(country_name):
         "Noruega": "Norway",
         "Irlanda": "Ireland",
         "Uzbequistão": "Uzbekistan"
-        # Add more corrections as necessary
+        # May add more corrections as necessary
     }
     return corrections.get(country_name, country_name)
 
