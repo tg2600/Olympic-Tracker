@@ -1,5 +1,5 @@
 import pandas as pd
-import matplotlib.pyplot as plt  # Use the default backend for interactive plotting
+import matplotlib.pyplot as plt  
 
 from app.shared import process_medal_counts
 from app.data_loader import fetch_data
