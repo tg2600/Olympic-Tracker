@@ -72,7 +72,7 @@ Run the web app (then view in the browser at http://localhost:5000/):
 FLASK_APP=web_app flask run
 
 # Windows OS:
-export FLASK_APP=web_app
-flask run
 # ... if 'export` doesn't work for you, try `set` instead
 # ... or set FLASK_APP variable via ".env" file
+export FLASK_APP=web_app
+flask run
