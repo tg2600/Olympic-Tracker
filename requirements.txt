@@ -6,3 +6,4 @@ pycountry
 emoji
 pytest
 flask
+gunicorn # for the production server
