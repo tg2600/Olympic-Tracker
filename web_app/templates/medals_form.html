@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+    <h2>Olympic Medals Tracker</h2>
+
+    <p>Enter a country name to see the Olympic medal count.</p>
+
+    <form action="/medals/dashboard" method="POST">
+        <label>Country Name:</label>
+        <input type="text" name="country_name" placeholder="e.g., Japan">
+        <br>
+        <button type="submit" class="btn btn-success">Submit</button>
+    </form>
+
+{% endblock %}

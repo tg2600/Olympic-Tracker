@@ -1,0 +1,3 @@
+
+# Flask Environment Variables
+FLASK_APP=web_app

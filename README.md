@@ -63,3 +63,16 @@ Total: 75
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+USAGE
+
+Run the web app (then view in the browser at http://localhost:5000/):
+
+# Mac OS:
+FLASK_APP=web_app flask run
+
+# Windows OS:
+# ... if `export` doesn't work for you, try `set` instead
+# ... or set FLASK_APP variable via ".env" file
+export FLASK_APP=web_app
+flask run

@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <h2>Olympic Medals for {{ country_name }}</h2>
+    
+    {% if flag %}
+        <p>Flag: {{ flag }}</p>
+    {% endif %}
+    
+    {% if medal_count %}
+        <table>
+            <tr>
+                <th>Medal Type</th>
+                <th>Count</th>
+            </tr>
+            {% for key, value in medal_count.items() %}
+                <tr>
+                    <td>{{ key }}</td>
+                    <td>{{ value }}</td>
+                </tr>
+            {% endfor %}
+        </table>
+    {% else %}
+        <p>No medal data found for {{ country_name }}.</p>
+    {% endif %}
+{% endblock %}

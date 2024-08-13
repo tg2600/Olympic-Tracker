@@ -1,6 +1,9 @@
 import pytest
 import pandas as pd
-from app.country_utils import correct_country_names, get_flag, fetch_data, process_medal_counts, get_medal_count
+from app.country_utils import correct_country_names, get_flag
+from app.data_loader import fetch_data
+from app.shared import process_medal_counts, get_medal_count
+from app.country_utils import get_flag
 
 def test_correct_country_names():
     assert correct_country_names("EUA") == "USA"

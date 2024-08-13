@@ -5,4 +5,4 @@ matplotlib
 pycountry
 emoji
 pytest
-
+flask
