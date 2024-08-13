@@ -2,6 +2,8 @@ from flask import Blueprint, request, render_template, redirect
 from app.data_loader import fetch_data
 from app.shared import process_medal_counts, get_medal_count
 from app.country_utils import get_flag
+from app.visualize_gold import plot_gold_medal_counts  # Importing for gold medals
+from app.visualize_allmedals import plot_total_medal_counts  # Importing for all medals
 
 medals_routes = Blueprint("medals_routes", __name__)
 
@@ -39,6 +41,26 @@ def medals_dashboard():
             flag=None,
             error=f"No data found for {country_name}."
         )
+
+@medals_routes.route("/medals/top20_all")
+def top20_all_medals():
+    # Fetch and process the medal data
+    request_url = "https://apis.codante.io/olympic-games/countries"
+    medal_counts = fetch_data(request_url)
+    medal_counts_df = process_medal_counts(medal_counts)
+    
+    # Plot the total medal counts (this will display the chart)
+    plot_total_medal_counts(medal_counts_df)
+
+@medals_routes.route("/medals/top20_gold")
+def top20_gold_medals():
+    # Fetch and process the medal data
+    request_url = "https://apis.codante.io/olympic-games/countries"
+    medal_counts = fetch_data(request_url)
+    medal_counts_df = process_medal_counts(medal_counts)
+    
+    # Plot the gold medal counts (this will display the chart)
+    plot_gold_medal_counts(medal_counts_df)
 
 @medals_routes.route("/api/medals.json")
 def medals_api():

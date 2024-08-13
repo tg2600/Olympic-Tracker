@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top 20 Countries by Gold Medals</title>
+</head>
+<body>
+    <h1>Top 20 Countries by Gold Medals</h1>
+    <div>
+        <img src="{{ url_for('static', filename='images/top_20_gold_medals.png') }}" alt="Top 20 Gold Medals Chart">
+    </div>
+    <a href="{{ url_for('medals_routes.medals_form') }}">Back to Medal Form</a>
+</body>
+</html>

@@ -1,10 +1,8 @@
 import pandas as pd
-import matplotlib.pyplot as plt  
+import matplotlib.pyplot as plt
 
-from app.shared import process_medal_counts  
-from app.data_loader import fetch_data  
-from app.country_utils import correct_country_names  
-
+from app.shared import process_medal_counts
+from app.data_loader import fetch_data
 
 # Fetch the medal counts data
 request_url = "https://apis.codante.io/olympic-games/countries"
@@ -12,9 +10,6 @@ medal_counts = fetch_data(request_url)
 
 # Process the medal counts into a DataFrame
 medal_counts_df = process_medal_counts(medal_counts)
-
-# Display the DataFrame
-print(medal_counts_df)
 
 # Function to visualize the total medal counts
 def plot_total_medal_counts(df):
