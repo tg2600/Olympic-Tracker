@@ -1,6 +1,5 @@
-import os
 import pandas as pd
-import matplotlib.pyplot as plt
+import matplotlib.pyplot as plt  # Use the default backend for interactive plotting
 
 from app.shared import process_medal_counts
 from app.data_loader import fetch_data
@@ -21,23 +20,13 @@ def plot_gold_medal_counts(df):
 
     # Sort and select the top 20 countries
     df = df.sort_values(by='Gold Medals', ascending=False).head(20)
-
-    # Create the plot
     df.plot(kind='bar', x='Country', y='Gold Medals', color='gold', figsize=(12, 8))
     plt.title('Top 20 Countries by Gold Medals')
     plt.xlabel('Country')
     plt.ylabel('Gold Medals')
     plt.xticks(rotation=45, ha='right')
     plt.tight_layout()
-
-    # Ensure the directory exists
-    output_dir = os.path.join('static', 'images')
-    os.makedirs(output_dir, exist_ok=True)
-
-    # Save the plot as a PNG file
-    output_path = os.path.join(output_dir, 'top_20_gold_medals.png')
-    plt.savefig(output_path)
-    plt.show()
+    plt.show()  # Display the plot in a window
 
 # Function to get the top 20 countries by gold medals
 def get_top_20_gold_medals():

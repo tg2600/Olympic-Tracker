@@ -1,6 +1,8 @@
 # this is the "web_app/__init__.py" file...
 
 from flask import Flask
+from dotenv import load_dotenv
+import os
 
 from web_app.routes.home_routes import home_routes
 from web_app.routes.medals_routes import medals_routes

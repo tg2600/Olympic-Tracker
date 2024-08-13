@@ -1,4 +1,4 @@
-from flask import Blueprint, request, render_template, redirect
+from flask import Blueprint, request, render_template
 from app.data_loader import fetch_data
 from app.shared import process_medal_counts, get_medal_count
 from app.country_utils import get_flag
@@ -49,8 +49,11 @@ def top20_all_medals():
     medal_counts = fetch_data(request_url)
     medal_counts_df = process_medal_counts(medal_counts)
     
-    # Plot the total medal counts (this will display the chart)
+    # Plot the total medal counts (this will display the chart in a window)
     plot_total_medal_counts(medal_counts_df)
+    
+    # Render a basic template to confirm the action
+    return render_template("simple_chart.html")
 
 @medals_routes.route("/medals/top20_gold")
 def top20_gold_medals():
@@ -59,8 +62,11 @@ def top20_gold_medals():
     medal_counts = fetch_data(request_url)
     medal_counts_df = process_medal_counts(medal_counts)
     
-    # Plot the gold medal counts (this will display the chart)
+    # Plot the gold medal counts (this will display the chart in a window)
     plot_gold_medal_counts(medal_counts_df)
+    
+    # Render a basic template to confirm the action
+    return render_template("simple_chart.html")
 
 @medals_routes.route("/api/medals.json")
 def medals_api():
