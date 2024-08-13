@@ -7,3 +7,4 @@ def fetch_data(url):
     else:
         print(f"Error fetching data: {response.status_code}")
         return None
+

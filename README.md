@@ -19,26 +19,30 @@ This application is a Python-based Olympic Games medal tracker that fetches and 
 
 1. Clone the repository to your local machine:
 
-   ```bash
    git clone https://github.com/yourusername/olympic-medal-tracker.git
    cd olympic-medal-tracker
-   ```
+   
 
 2. Install the required dependencies using `pip`:
 
-   ```bash
    pip install -r requirements.txt
-   ```
+
 
 ## Usage
 
 ### Fetching and Displaying Medal Data
 
-To fetch and display the top 20 countries by gold medal counts, run:
+To fetch and display the top 20 countries by all medal counts, run:
 
-```bash
-python main.py
-```
+python -m app.visualize_allmedals
+
+To fetch and display the top 20 countries by gold medal counts only, run:
+
+python -m app.visualize_gold
+
+To input country name and receive medal data output, run:
+
+python -m app.main
 
 This will prompt you to enter a country name, and it will display the medal counts along with the flag for that country.
 
@@ -52,6 +56,20 @@ Silver Medals: 25
 Bronze Medals: 20
 Total: 75
 ```
+
+## Running the Application
+
+You can also explore and run the Olympic Games Medal Tracker application directly from your web browser. Visit the [Olympic Tracker application](https://olympic-tracker-1.onrender.com/) to see the app in action.
+
+## Running Tests
+
+To ensure the integrity of the code, you can run unit tests included in the project. These tests are designed to verify the functionality of key components.
+
+### Running All Tests
+
+To run all tests, navigate to the project's root directory and use the following command:
+
+pytest
 
 ## Project Structure
 
