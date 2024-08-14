@@ -65,10 +65,6 @@ Bronze Medals: 20
 Total: 75
 ```
 
-## Running the Application
-
-You can also explore and run the Olympic Games Medal Tracker application directly from your web browser. Visit the [Olympic Tracker application](https://olympic-tracker-1.onrender.com/) to see the app in action.
-
 ## Running Tests
 
 To ensure the integrity of the code, you can run unit tests included in the project. These tests are designed to verify the functionality of key components.
@@ -106,3 +102,7 @@ FLASK_APP=web_app flask run
 export FLASK_APP=web_app
 flask run
 ```
+
+## Running the Application on Your Web Broswer 
+
+You can also explore and run the Olympic Games Medal Tracker application directly from your web browser. Visit the [Olympic Tracker application](https://olympic-tracker-1.onrender.com/) to see the app in action.
