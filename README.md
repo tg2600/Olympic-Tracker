@@ -19,14 +19,16 @@ This application is a Python-based Olympic Games medal tracker that fetches and 
 
 1. Clone the repository to your local machine:
 
+   ```sh
    git clone https://github.com/yourusername/olympic-medal-tracker.git
    cd olympic-medal-tracker
-   
+   ```
 
 2. Install the required dependencies using `pip`:
 
+   ```sh
    pip install -r requirements.txt
-
+   ```
 
 ## Usage
 
@@ -34,15 +36,21 @@ This application is a Python-based Olympic Games medal tracker that fetches and 
 
 To fetch and display the top 20 countries by all medal counts, run:
 
+```sh
 python -m app.visualize_allmedals
+```
 
 To fetch and display the top 20 countries by gold medal counts only, run:
 
+```sh
 python -m app.visualize_gold
+```
 
 To input country name and receive medal data output, run:
 
+```sh
 python -m app.main
+```
 
 This will prompt you to enter a country name, and it will display the medal counts along with the flag for that country.
 
@@ -69,7 +77,9 @@ To ensure the integrity of the code, you can run unit tests included in the proj
 
 To run all tests, navigate to the project's root directory and use the following command:
 
+```sh
 pytest
+```
 
 ## Project Structure
 
@@ -82,10 +92,11 @@ pytest
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-USAGE
+## Running the Web Application Locally
 
 Run the web app (then view in the browser at http://localhost:5000/):
 
+```sh
 # Mac OS:
 FLASK_APP=web_app flask run
 
@@ -94,3 +105,4 @@ FLASK_APP=web_app flask run
 # ... or set FLASK_APP variable via ".env" file
 export FLASK_APP=web_app
 flask run
+```
